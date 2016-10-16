@@ -99,7 +99,9 @@ where 365 - datediff(CURDATE(),保养时间)<10;
 
 截图：![到期设备]( http://pan.baidu.com/s/1kVS8jcF /to/到期设备.jpg)
 
-E-R图：![E-R图]( http://pan.baidu.com/s/1cijsqq /to/ E-R图.jpg)
+E-R图：
+
+![E-R图]( https://github.com/scc38514/MIS/to/ E-R图.jpg)
 
 模型地址：(http://a4m0mm.axshare.com)
 
