@@ -101,7 +101,7 @@ where 365 - datediff(CURDATE(),保养时间)<10;
 
 E-R图：
 
-![E-R图](../to/ E-R图.jpg)
+![E-R图](../E-R图.jpg/to/ E-R图.jpg)
 
 模型地址：(http://a4m0mm.axshare.com)
 
