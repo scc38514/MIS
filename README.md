@@ -91,15 +91,15 @@ where 设备号=1 and <br/>
 保养记录.保养消耗id=保养消耗.保养消耗id and<br/>
 保养记录.保养id=保养单.保养id;<br/>
 
-截图：
+截图：![设备保养信息]( http://pan.baidu.com/s/1pKIavzX /to/保养信息.jpg)
 
 查询到期信息:<br/>
 select 设备号 from 电器设备保养.保养记录 NATURAL join 电器设备保养.保养单<br/>
 where 365 - datediff(CURDATE(),保养时间)<10;
 
-截图：
+截图：![到期设备]( http://pan.baidu.com/s/1kVS8jcF /to/到期设备.jpg)
 
-E-R图：
+E-R图：![E-R图]( http://pan.baidu.com/s/1cijsqq /to/ E-R图.jpg)
 
 模型地址：(http://a4m0mm.axshare.com)
 
