@@ -3,19 +3,19 @@
 SELECT MenuName,MenuUrl，MenuID<br/> 
 FROM sys_menu <br/>
 where MenuID in<br/>
-(SELECT PrivilegeAccessKey <br/><br/><br/>
-FROM cf_privilege <br/><br/><br/>
-where PrivilegeMasterKey in<br/><br/><br/>
-    (SELECT RoleID <br/><br/><br/>
-    FROM cf_role <br/><br/><br/>
-    where RoleID in<br/><br/><br/>
-        (SELECT RoleID <br/><br/><br/>
-        FROM cf_userrole <br/><br/><br/>
-        where UserID in<br/><br/><br/>
-            (SELECT UserID <br/><br/><br/>
-            FROM cf_user <br/><br/><br/>
-            where LoginName='test1')))<br/><br/><br/>
-and PrivilegeAccess='Sys_Menu');<br/><br/>
+(SELECT PrivilegeAccessKey <br/>
+FROM cf_privilege <br/>
+where PrivilegeMasterKey in<br/>
+    (SELECT RoleID <br/>
+    FROM cf_role <br/>
+    where RoleID in<br/>
+        (SELECT RoleID <br/>
+        FROM cf_userrole <br/>
+        where UserID in<br/>
+            (SELECT UserID <br/>
+            FROM cf_user <br/>
+            where LoginName='test1')))<br/>
+and PrivilegeAccess='Sys_Menu');<br/>
 #####伪代码：
 1、	根据名称在CF_User表中查找人员编号UserID<br/>
 2、	根据人员编号UserID在CF_Userrole表中查找该人员所对应的角色编号RoleID<br/>
