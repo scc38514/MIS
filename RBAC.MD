@@ -21,7 +21,7 @@ and PrivilegeAccess='Sys_Menu');<br/>
 2、	根据人员编号UserID在CF_Userrole表中查找该人员所对应的角色编号RoleID<br/>
 3、	根据角色编号RoleID在CF_Role表中查找该RoleID所对应的privilegemasterkey<br/>
 4、	根据privilegemasterkey在CF_privilege表中查找该privilegemasterkey对应的MenuID并选取其中PrivilegeAccess='Sys_Menu'的MenuName，MenuID，MenuUrl
-#####查询结果：![Sys_menu](/.jpg)
+#####查询结果：![Sys_menu](/sys_menu.jpg)
 ###对订单(order)页面中的操作权限(sys_button)
 #####查询sql语句：
 #####伪代码：
