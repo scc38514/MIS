@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="conststruts.devMode" value="true"/>
+	<!-- Struts2的所有Action都需位于package下 -->
+	<package name="lee" extends="struts-default">
+		<!-- 定义名为login的Action，其实现类为LoginAction类 -->
+		<action name="query" class="cn.edu.cumt.ec.action.News">
+			<!-- 处理结果返回error，对应/WEB-INF/content/error.jsp视图资源 -->
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<!-- 处理结果返回success，对应/WEB-INF/content/welcome.jsp视图资源 -->
+			<result>/WEB-INF/content/welcome.jsp</result>
+		</action>
+		<action name="*">
+			<result>/WEB-INF/content/{1}.jsp</result>
+		</action>
+		<action name="Loginht" class="cn.edu.cumt.ec.action.loginH">
+			<!-- 定义三个逻辑视图和物理资源之间的映射 -->	
+			<result name="m">/WEB-INF/content/indexH.jsp</result>
+			<result name="c">/WEB-INF/content/indexC.jsp</result>
+			<result name="k">/WEB-INF/content/indexK.jsp</result>
+			<result name="p">/WEB-INF/content/indexP.jsp</result>
+			<result name="u">/WEB-INF/content/error.jsp</result>
+		</action>
+		<action name="Registerht" class="cn.edu.cumt.ec.action.registerH">
+			<!-- 定义三个逻辑视图和物理资源之间的映射 -->
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<result name="success">/WEB-INF/content/login.jsp</result>
+			
+			
+		</action>
+		<action name="addItem" class="cn.edu.cumt.ec.action.tianJIA">
+			<!-- 定义三个逻辑视图和物理资源之间的映射 -->
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<result name="success">/WEB-INF/content/tianjia.jsp</result>
+			
+			
+		</action>
+		<action name="CAIGOU" class="cn.edu.cumt.ec.action.CG">
+			<!-- 定义三个逻辑视图和物理资源之间的映射 -->
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<result name="success">/WEB-INF/content/cglr.jsp</result>
+			
+			
+		</action>
+		<action name="kucun" class="cn.edu.cumt.ec.action.kclr">
+			<!-- 定义三个逻辑视图和物理资源之间的映射 -->
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<result name="success">/WEB-INF/content/kclr.jsp</result>
+			
+			
+		</action>
+		<action name="peisong" class="cn.edu.cumt.ec.action.pslr">
+			<!-- 定义三个逻辑视图和物理资源之间的映射 -->
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<result name="success">/WEB-INF/content/pslr.jsp</result>
+			
+			
+		</action>
+		<action name="shanchu" class="cn.edu.cumt.ec.action.Shanchu">
+			<!-- 定义三个逻辑视图和物理资源之间的映射 -->
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<result name="success">/WEB-INF/content/scsc.jsp</result>
+			
+			
+		</action>
+		<action name="LIUYAN" class="cn.edu.cumt.ec.action.addly">
+			<!-- 定义三个逻辑视图和物理资源之间的映射 -->
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<result name="success">/WEB-INF/content/succ.jsp</result>
+			
+			
+		</action>
+		<action name="chuli" class="cn.edu.cumt.ec.action.Chu">
+			<!-- 定义三个逻辑视图和物理资源之间的映射 -->
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<result name="success">/WEB-INF/content/liuyanshow.jsp</result>
+			
+			
+		</action>
+		<action name="ss" class="cn.edu.cumt.ec.action.sousuo">
+			<!-- 定义三个逻辑视图和物理资源之间的映射 -->
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<result name="success">/WEB-INF/content/select.jsp</result>	
+		</action>
+		<action name="Skc" class="cn.edu.cumt.ec.action.skc">
+			<!-- 定义三个逻辑视图和物理资源之间的映射 -->
+			<result name="error">/WEB-INF/content/error.jsp</result>
+			<result name="success">/WEB-INF/content/sekc.jsp</result>	
+		</action>
+	</package>
+</struts>
